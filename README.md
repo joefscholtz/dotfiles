@@ -1,6 +1,12 @@
 # Joe's dotfiles
 
+## Preview
+
+Desktop preview:
 ![Desktop preview](preview/desktop.png)
+
+kitty + tmux preview:
+![kitty + tmux preview](preview/kitty_tmux.png)
 
 ## Installation
 
