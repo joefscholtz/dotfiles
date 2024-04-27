@@ -1,0 +1,185 @@
+// Config //
+configuration {
+    modi:                        "drun,filebrowser,window,run,calc";
+    show-icons:                  true;
+    display-drun:                " ";
+    display-run:                 " ";
+    display-filebrowser:         " ";
+    display-window:              " ";
+    display-combi:               " ";
+    display-calc:                "󰪚 ";
+    drun-display-format:         "{name}";
+    window-format:               "{w}{t}";
+    font:                        "JetBrainsMono Nerd Font Bold 9";
+    icon-theme:                  "Papirus";
+    //icon-theme:                  "Tela-circle-dracula";
+    kb-select-1:                 "Control+1";
+    kb-select-2:                 "Control+2";
+    kb-select-3:                 "Control+3";
+    kb-select-4:                 "Control+4";
+    kb-select-5:                 "Control+5";
+    kb-select-6:                 "Control+6";
+    kb-select-7:                 "Control+7";
+    kb-select-8:                 "Control+8";
+    kb-select-9:                 "Control+9";
+    kb-select-10:                "Control+0";
+}
+
+@theme "~/.config/rofi/theme.rasi"
+
+
+// Main //
+window {
+    height:                      32em;
+    width:                       37em;
+    transparency:                "real";
+    fullscreen:                  false;
+    enabled:                     true;
+    cursor:                      "default";
+    spacing:                     0em;
+    padding:                     0em;
+    border:                      3px;
+    border-color:                @main-br;
+    border-radius:               1em 1em 1em 1em;
+    // background-color:            @main-bg;
+    background-color:            transparent;
+}
+mainbox {
+    enabled:                     true;
+    spacing:                     0em;
+    padding:                     0em;
+    orientation:                 vertical;
+    children:                    [ "mode-switcher", "inputbar", "listbox" ];
+    // background-color:            @main-bg;
+    background-color:            transparent;
+
+}
+
+// Modes //
+mode-switcher {
+    width:                       9em;
+    orientation:                 horizontal;
+    enabled:                     true;
+    padding:                     1em 1em 0em 1em;
+    spacing:                     1em;
+    background-color:            @main-bg;
+}
+button {
+    cursor:                      pointer;
+    font:                        "JetBrainsMono Nerd Font 15";
+    border-radius:               1em 1em 0em 0em;
+    border-color:                @main-bg;
+    // border:                      5px;
+    background-color:            @select-bg;
+    text-color:                  @main-bg;
+}
+button selected {
+    border-radius:               1em 1em 0em 0em;
+    background-color:            @main-br;
+    text-color:                  @main-bg;
+}
+
+// Inputs //
+inputbar {
+    width:                       0em;
+    enabled:                     true;
+    width:                       24em;
+    padding:                     0em;
+    spacing:                     0em;
+    border-radius:               0em 0em 0em 0em;
+    padding:                     1em 1.5em 1em 1.5em;
+    children:                    [ "entry" ];
+    background-color:            @main-bg;
+}
+entry {
+    vertical-align:              0.5;
+    border-radius:               3em;
+    enabled:                     true;
+    spacing:                     0em;
+    padding:                     1em;
+    text-color:                  @main-bg;
+    background-color:            @main-fg;
+}
+
+
+// Lists //
+listbox {
+    padding:                     0em;
+    spacing:                     0em;
+    orientation:                 vertical;
+    //children:                    [ "dummy" , "listview" , "dummy" ];
+    children:                    [ "listview"];
+    background-color:            @main-bg;
+}
+listview {
+    padding:                     0em 1em 0em 1em;
+    spacing:                     0em;
+    enabled:                     true;
+    columns:                     1;
+    lines:                       8;
+    cycle:                       true;
+    dynamic:                     true;
+    scrollbar:                   false;
+    layout:                      vertical;
+    reverse:                     false;
+    expand:                      false;
+    fixed-height:                true;
+    fixed-columns:               true;
+    cursor:                      "default";
+    background-color:            transparent;
+    text-color:                  @main-fg;
+}
+dummy {
+    background-color:            @select-bg;
+}
+
+
+// Elements //
+element {
+    orientation:                 horizontal;
+    enabled:                     true;
+    spacing:                     1.5em;
+    padding:                     0.5em;
+    cursor:                      pointer;
+    background-color:            transparent;
+    text-color:                  @main-fg;
+    children:                    ["element-index","element-icon","element-text"];
+}
+@media(max-aspect-ratio: 1.8) {
+    element {
+        orientation:             vertical;
+    }
+}
+element selected.normal {
+    background-color:            @select-bg;
+    text-color:                  @select-fg;
+}
+element-icon {
+    size:                        2em;
+    cursor:                      inherit;
+    background-color:            transparent;
+    text-color:                  inherit;
+}
+element-text {
+    vertical-align:              0.5;
+    horizontal-align:            0;
+    cursor:                      inherit;
+    background-color:            transparent;
+    text-color:                  inherit;
+}
+element-index{
+    background-color:            @select-bg;
+    text-color:                  @main-bg;
+    //padding: 0.5em;
+    width: 2em;
+    height: 2em;
+    border-radius:               5px;
+    vertical-align:              0.5;
+    horizontal-align:              0.5;
+    font:                        "JetBrainsMono Nerd Font Bold 12";
+  }
+element-index selected.normal{
+    background-color:            @main-bg;
+    text-color:                  @main-br;
+  }
+
