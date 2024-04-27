@@ -1,3 +1,7 @@
+# Joe's dotfiles
+
+![Desktop preview](preview/desktop.png)
+
 ## Installation
 
 - Install OpenSUSE Tumbleweed server
