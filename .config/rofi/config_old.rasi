@@ -25,7 +25,7 @@ configuration {
     kb-select-10:                "Control+0";
 }
 
-@theme "~/.config/rofi/theme.rasi"
+@theme "~/.config/rofi/styles/theme.rasi"
 
 
 // Main //

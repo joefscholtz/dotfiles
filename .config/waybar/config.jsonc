@@ -64,7 +64,7 @@
     "path": "/home/joe/.config/assets/opensuse.svg",
     // "path": "/home/joe/.config/assets/test.png",
     // "on-click": "rofi -show drun",
-    "on-click": "wofi --show drun",
+    "on-click": "rofi -modes 'drun,calc' -show 'drun' -config $HOME/.config/rofi/config.rasi",
     "on-click-right": "killall rofi",
     "size": 20,
     "interval": 5,
@@ -226,7 +226,8 @@
     "format-linked": "󰈀 {ifname} (No IP)",
     "format-disconnected": "󰖪 ",
     "tooltip-format-disconnected": "Disconnected",
-    "format-alt": "<span foreground='#99ffdd'> {bandwidthDownBytes}</span> <span foreground='#ffcc66'> {bandwidthUpBytes}</span>",
+    "on-click": "rofi-wifi-menu.sh",
+    //"format-alt": "<span foreground='#99ffdd'> {bandwidthDownBytes}</span> <span foreground='#ffcc66'> {bandwidthUpBytes}</span>",
     "interval": 2,
   },
 
