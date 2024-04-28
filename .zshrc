@@ -2,18 +2,21 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 export PATH=$HOME/.cargo/bin:$HOME/bin:/usr/local/bin:$PATH
-export ZSH="$HOME/.oh-my-zsh"
+# export ZSH="$HOME/.oh-my-zsh"
+#
+# ZSH_THEME="agnoster"
 
-ZSH_THEME="agnoster"
+# plugins=( 
+#     git
+#     suse
+#     #zsh-vi-mode
+#     zsh-autosuggestions
+#     zsh-syntax-highlighting
+# )
 
-plugins=( 
-    git
-    suse
-    zsh-autosuggestions
-    zsh-syntax-highlighting
-)
-
-source $ZSH/oh-my-zsh.sh
+#source $ZSH/oh-my-zsh.sh
+source $HOME/.config/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $HOME/.config/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # check the suse plugins commands here
 # https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/suse/suse.plugin.zsh
@@ -48,6 +51,19 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 
 #aliases
 alias nv="nvim"
+
+#zypper
+alias zin='sudo zypper in'
+alias zinr='sudo zypper inr'
+alias zrm='sudo zypper rm'
+alias zsi='sudo zypper si'
+alias zse='sudo zypper se'
+alias zve='sudo zypper ve'
+alias zdup='sudo zypper dup'
+
+#starship
+eval "$(starship init zsh)"
+
 
 # lf icons
 export LF_ICONS="\
