@@ -2,21 +2,16 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 export PATH=$HOME/.cargo/bin:$HOME/bin:/usr/local/bin:$PATH
-# export ZSH="$HOME/.oh-my-zsh"
-#
-# ZSH_THEME="agnoster"
 
-# plugins=( 
-#     git
-#     suse
-#     #zsh-vi-mode
-#     zsh-autosuggestions
-#     zsh-syntax-highlighting
-# )
-
-#source $ZSH/oh-my-zsh.sh
 source $HOME/.config/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $HOME/.config/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $HOME/.config/zsh/zsh-vi-mode/zsh-vi-mode.zsh
+ZVM_VI_HIGHLIGHT_FOREGROUND=#cdd6f4           # Hex value
+ZVM_VI_HIGHLIGHT_BACKGROUND=#fc78c4           # Hex value
+ZVM_VI_HIGHLIGHT_EXTRASTYLE=bold    # bold and underline
+ZVM_INSERT_MODE_CURSOR=$ZVM_CURSOR_BLOCK
+ZVM_NORMAL_MODE_CURSOR=$ZVM_CURSOR_BLOCK
+ZVM_OPPEND_MODE_CURSOR=$ZVM_CURSOR_BLOCK
 
 # check the suse plugins commands here
 # https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/suse/suse.plugin.zsh
