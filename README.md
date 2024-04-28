@@ -16,12 +16,16 @@ kitty + tmux preview:
   - nvidia: y, gtk themes: y, bluetooth: y, thunar:n, sddm:n, xdg: y, zsh:y,asus rog laptops:n,dotfiles:n
   - TODO: fork this repo and add the following packages
 
+### Terminal
+
 - neofetch
 - kitty
 - neovim
 - LazyVim prerequisites
 - xclip, hyprpaper, dolphin, fd, texlive-latex-bin, exa, loupe
 - stow
+- sudo zypper in starship
+- eval "$(starship init zsh)"
 
 ### lf
 
