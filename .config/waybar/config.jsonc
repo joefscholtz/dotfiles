@@ -64,7 +64,7 @@
     "path": "/home/joe/.config/assets/opensuse.svg",
     // "path": "/home/joe/.config/assets/test.png",
     // "on-click": "rofi -show drun",
-    "on-click": "rofi -modes 'drun,calc' -show 'drun' -config $HOME/.config/rofi/config.rasi",
+    "on-click": "rofi -modes 'drun,calc,window' -show 'drun' -config $HOME/.config/rofi/config.rasi",
     "on-click-right": "killall rofi",
     "size": 20,
     "interval": 5,
