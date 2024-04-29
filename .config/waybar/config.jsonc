@@ -205,6 +205,7 @@
     "format-plugged": " {capacity}%",
     "format-alt": "{time} {icon}",
     "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"], //"󰂄󱐋󰂅"
+    "interval": 1,
   },
 
   "backlight": {
@@ -228,7 +229,7 @@
     "tooltip-format-disconnected": "Disconnected",
     "on-click": "rofi-wifi-menu.sh",
     //"format-alt": "<span foreground='#99ffdd'> {bandwidthDownBytes}</span> <span foreground='#ffcc66'> {bandwidthUpBytes}</span>",
-    "interval": 2,
+    "interval": 1,
   },
 
   "pulseaudio": {
