@@ -22,19 +22,33 @@ kitty + tmux preview:
 - kitty
 - neovim
 - LazyVim prerequisites
-- xclip, hyprpaper, dolphin, fd, texlive-latex-bin, exa, loupe
+- xclip, hyprpaper, dolphin, fd, texlive-latex-bin, eza, loupe
 - stow
 - sudo zypper in starship
-- eval "$(starship init zsh)"
-
-### lf
-
-- sudo zypper in ueberzugpp GraphicsMagick ffmpeg-6 ffmpeg-7 ghostscript lf
+- sudo zypper in yazi
 
 ### Waybar
 
 - sudo zypper in rofi rofi-calc wofi dunst waybar
 - sudo zypper in papirus-icon-theme
+
+### Utils
+
+sudo zypper in cheese
+
+### PDF
+
+PDF viewer:
+
+- Sioyek?
+
+Signing:
+
+- okular
+
+Merging:
+
+- pdfarranger
 
 ### AGS
 
@@ -56,7 +70,7 @@ kitty + tmux preview:
   - make
   - sudo make install
 - sudo zypper in hyprcursor
-- hyprctl setcursor Bibata-Modern-Classic
+- hyprctl setcursor Bibata-Modern-Classic 24
 - sudo zypper in flatpak flatseal
 - add flathub repos
   flatpak install flathub com.github.tchx84.Flatseal
@@ -66,25 +80,18 @@ kitty + tmux preview:
 
 ## TODO
 
-- clipboard manager
-- hyprcursor and xcursor
-- dolphin config
-- figure out ags
-- app launcher like pop launcher
-- vertical workspaces?
-- import my kitty, tmux and neovim config
-- change tmux and neovim themes to dracula
-- kitty custom icon + script to automate that
-- customize kitty icon
-- new leader key for tmux
-- resource monitor in topbar
-- bashrc and zshrc
-- use starship
-- use gnu stow (or equivalent)
-- custom icon pack
-- OpenSUSE icon in top bar!!!!! très important!!
-- open kitty with tmux automaticaly in the first workspace
-- touchpad gestures
+[ ] clipboard manager
+[?] hyprcursor and xcursor
+[ ] dolphin config
+[ ] vertical workspaces?
+[ ] import my kitty, tmux and neovim config
+[ ] change tmux and neovim themes to dracula
+[ ] customize kitty icon
+[ ] new leader key for tmux
+[ ] resource monitor in topbar
+[ ] bashrc and zshrc
+[ ] open kitty with tmux automaticaly in the first workspace?
+[ ] touchpad gestures
 
 ### Dumb
 
