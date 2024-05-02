@@ -2,8 +2,8 @@
 
 Tested with ROS 2 Humble
 
-### Set locale
+### Install nix package manager
 
 ```bash
-export LANG=en_US.UTF-8
+sh <(curl -L https://nixos.org/nix/install) --daemon
 ```
