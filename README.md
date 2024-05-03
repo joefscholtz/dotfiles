@@ -23,6 +23,9 @@ kitty + tmux preview:
 - neovim
 - LazyVim prerequisites
 - xclip, hyprpaper, dolphin, fd, texlive-latex-bin, eza, loupe
+- fzf
+- bat, bat-extras
+- zoxide
 - stow
 - sudo zypper in starship
 - sudo zypper in yazi
