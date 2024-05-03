@@ -1,10 +1,23 @@
 palette = "catppuccin_mocha"
 
+format="$all$username$hostname$character"
+
+[username]
+format="[$user](bold lavender)"
+show_always=true
+
+[hostname]
+ssh_symbol = " "
+ssh_only = false
+format = '[$ssh_symbol](bold blue)[](bold red)[$hostname](bold lavender) '
+trim_at = '.companyname.com'
+disabled = false
+
 [character]
 # Note the use of Catppuccin color 'maroon'
-success_symbol = "[joe[](bold red)pixie [INSERT](bold green) [❯](bold green)](bold lavender)"
-error_symbol = "[joe[](bold red)pixie [INSERT](bold green) [❯](bold red)](bold lavender)"
-vimcmd_symbol = "[joe[](bold red)pixie [NORMAL](bold pink) [❮](bold pink)](bold lavender)"
+success_symbol = "[INSERT ❯](bold green)"
+error_symbol = "[INSERT ❯](bold red)"
+vimcmd_symbol = "[NORMAL ❮](bold pink)"
 
 [directory]
 truncation_length = 4
@@ -92,9 +105,6 @@ symbol = " "
 
 [hg_branch]
 symbol = " "
-
-[hostname]
-ssh_symbol = " "
 
 [java]
 symbol = " "
