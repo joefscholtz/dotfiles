@@ -13,6 +13,8 @@ ZVM_INSERT_MODE_CURSOR=$ZVM_CURSOR_BEAM
 ZVM_NORMAL_MODE_CURSOR=$ZVM_CURSOR_BLOCK
 ZVM_OPPEND_MODE_CURSOR=$ZVM_CURSOR_BLOCK
 
+export FPATH="$HOME/.config/zsh/eza/completions/zsh:$FPATH"
+
 # bun completions
 [ -s "/home/joe/.bun/_bun" ] && source "/home/joe/.bun/_bun"
 

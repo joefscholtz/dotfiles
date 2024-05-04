@@ -7,3 +7,6 @@
 [submodule ".config/zsh/zsh-vi-mode"]
 	path = .config/zsh/zsh-vi-mode
 	url = https://github.com/jeffreytse/zsh-vi-mode.git
+[submodule ".config/zsh/eza"]
+	path = .config/zsh/eza
+	url = https://github.com/eza-community/eza.git
