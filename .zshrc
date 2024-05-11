@@ -39,6 +39,8 @@ alias zse='sudo zypper se'
 alias zve='sudo zypper ve'
 alias zdup='sudo zypper dup'
 
+alias ls_old='ls'
+alias ls='eza --all --color=always --git --icons=always'
 alias l='eza --all --color=always --git --icons=always'
 alias ll='eza --all --long --color=always --git --icons=always --group'
 
@@ -51,20 +53,20 @@ eval "$(fzf --zsh)"
 # . /usr/share/fzf/shell/completion.zsh
 
 # -- Use fd instead of fzf --
-export FZF_DEFAULT_COMMAND="fd --hidden --strip-cwd-prefix --exclude .git"
+export FZF_DEFAULT_COMMAND="fd --hidden --strip-cwd-prefix --exclude .git -I"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-export FZF_ALT_C_COMMAND="fd --type=d --hidden --strip-cwd-prefix --exclude .git"
+export FZF_ALT_C_COMMAND="fd --type=d --hidden --strip-cwd-prefix --exclude .git -I"
 
 # Use fd (https://github.com/sharkdp/fd) for listing path candidates.
 # - The first argument to the function ($1) is the base path to start traversal
 # - See the source code (completion.{bash,zsh}) for the details.
 _fzf_compgen_path() {
-  fd --hidden --exclude .git . "$1"
+  fd --hidden --exclude .git -I . "$1"
 }
 
 # Use fd to generate the list for directory completion
 _fzf_compgen_dir() {
-  fd --type=d --hidden --exclude .git . "$1"
+  fd --type=d --hidden --exclude .git -I . "$1"
 }
 
 show_file_or_dir_preview="if [ -d {} ]; then eza --tree --color=always {} | head -200; else bat -n --color=always --line-range :500 {}; fi"
