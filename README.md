@@ -105,3 +105,9 @@ Merging:
 - hotswap themes?
 - change hyprland animations
 - no gaps or active border for workspaces with only one window?
+
+## Special thanks
+
+- [Hyprland](https://github.com/hyprwm/Hyprland)
+- [Hyprdots](https://github.com/prasanthrangan/hyprdots)
+- [JaKooLit](https://github.com/JaKooLit)
