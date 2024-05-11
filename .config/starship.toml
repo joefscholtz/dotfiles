@@ -1,6 +1,6 @@
 palette = "catppuccin_mocha"
 
-format="$all$username$hostname$character"
+format="$all$container$username$hostname$character"
 
 [username]
 format="[$user](bold lavender)"
@@ -66,6 +66,10 @@ symbol = " "
 
 [conda]
 symbol = " "
+
+[container]
+symbol = ""
+format = '[$symbol \[$name\]]($style) '
 
 [crystal]
 symbol = " "
