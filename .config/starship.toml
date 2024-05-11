@@ -58,6 +58,9 @@ crust = "#11111b"
 [aws]
 symbol = "  "
 
+[[battery.display]]
+threshold = 25
+
 [buf]
 symbol = " "
 
