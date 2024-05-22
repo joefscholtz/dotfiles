@@ -13,6 +13,12 @@ ZVM_INSERT_MODE_CURSOR=$ZVM_CURSOR_BEAM
 ZVM_NORMAL_MODE_CURSOR=$ZVM_CURSOR_BLOCK
 ZVM_OPPEND_MODE_CURSOR=$ZVM_CURSOR_BLOCK
 
+#zsh history
+HISTDUP=erase
+setopt hist_ignore_all_dups
+setopt hist_save_no_dups
+setopt hist_ignore_dups
+
 export FPATH="$HOME/.config/zsh/eza/completions/zsh:$FPATH"
 
 # bun completions

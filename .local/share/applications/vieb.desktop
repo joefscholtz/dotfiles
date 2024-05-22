@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Name=Vieb
+Terminal=false
+Exec=sh -c '$HOME/bin/vieb'
+Icon=~/bin/vieb-12.0.0/vieb.svg

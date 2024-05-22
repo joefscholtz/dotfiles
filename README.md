@@ -19,6 +19,7 @@ kitty + tmux preview:
 ### Terminal
 
 - neofetch
+- w3m (terminal web browser)
 - kitty
 - neovim
 - LazyVim prerequisites
@@ -37,7 +38,9 @@ kitty + tmux preview:
 
 ### Utils
 
-sudo zypper in cheese
+sudo zypper in cheese scrcpy
+
+- vieb
 
 ### PDF
 
