@@ -24,7 +24,7 @@ kitty + tmux preview:
 - neovim
 - LazyVim prerequisites
 - xclip, hyprpaper, dolphin, fd, texlive-latex-bin, eza, loupe
-- fzf
+- fzf, fzf-tmux
 - bat, bat-extras
 - zoxide
 - stow
