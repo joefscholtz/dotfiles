@@ -29,57 +29,69 @@ export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
 #aliases
+alias ros2topics='watch -n 0.1 ros2 topic list'
+alias clip='xclip -sel clip'
 alias nv="nvim"
-export BAT_THEME=Dracula
-alias cat="bat"
-alias cd_old="cd"
-alias man_old="man"
-alias man="batman"
+alias l="ls -a"
+alias ll="ls -al"
 
-#zypper
-alias zin='sudo zypper in'
-alias zinr='sudo zypper inr'
-alias zrm='sudo zypper rm'
-alias zsi='sudo zypper si'
-alias zse='sudo zypper se'
-alias zve='sudo zypper ve'
-alias zdup='sudo zypper dup'
-
-alias ls_old='ls'
-alias ls='eza --all --color=always --git --icons=always'
-alias l='eza --all --color=always --git --icons=always'
-alias ll='eza --all --long --color=always --git --icons=always --group'
+#virtualenvwrapper export WORKON_HOME=$HOME/.virtualenvs && source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
+. "$HOME/.cargo/env"
 
 #starship
 eval "$(starship init zsh)"
 
-# Set up fzf key bindings and fuzzy completion
-eval "$(fzf --zsh)"
-# . /usr/share/fzf/shell/key-bindings.zsh
-# . /usr/share/fzf/shell/completion.zsh
-
-# -- Use fd instead of fzf --
-export FZF_DEFAULT_COMMAND="fd --hidden --strip-cwd-prefix --exclude .git -I"
-export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-export FZF_ALT_C_COMMAND="fd --type=d --hidden --strip-cwd-prefix --exclude .git -I"
-
-# Use fd (https://github.com/sharkdp/fd) for listing path candidates.
-# - The first argument to the function ($1) is the base path to start traversal
-# - See the source code (completion.{bash,zsh}) for the details.
-_fzf_compgen_path() {
-  fd --hidden --exclude .git -I . "$1"
-}
-
-# Use fd to generate the list for directory completion
-_fzf_compgen_dir() {
-  fd --type=d --hidden --exclude .git -I . "$1"
-}
-
-show_file_or_dir_preview="if [ -d {} ]; then eza --tree --color=always {} | head -200; else bat -n --color=always --line-range :500 {}; fi"
-
-export FZF_CTRL_T_OPTS="--preview '$show_file_or_dir_preview'"
-export FZF_ALT_C_OPTS="--preview 'eza --tree --color=always {} | head -200'"
-
 #zoxide
 eval "$(zoxide init zsh)"
 alias cd="z"
+
+#bat
+alias cat="batcat"
+
+alias rgf="rg --color=always --line-number --no-heading --smart-case '${*:-}' |
+  fzf --ansi \
+      --color 'hl:-1:underline,hl+:-1:underline:reverse' \
+      --delimiter : \
+      --preview 'batcat --color=always {1} --highlight-line {2}' \
+      --preview-window 'up,60%,border-bottom,+{2}+3/3,~3'"
+
+alias j="just"
+#ros
+export ROS_DOMAIN_ID=11
+. /opt/ros/humble/setup.zsh
+#. /home/joe/jaguar_ws/install/local_setup.bash
+. /home/joe/outside_git/ros2_ws/install/local_setup.zsh
+. /home/joe/outside_git/ros2_ws/src/bringup/install/local_setup.zsh
+# . /home/joe/mapping_ws/install/local_setup.bash
+# . /home/joe/outdoor_ws/install/local_setup.bash
+# . /home/joe/ros2_ws/install/local_setup.zsh
+# . /home/joe/livox_ros_driver2_ws/install/local_setup.zsh
+# . /usr/share/gazebo/setup.sh
+# . /usr/share/gazebo-11/setup.sh
+export TURTLEBOT3_MODEL=waffle
+export GAZEBO_MODEL_PATH=$GAZEBO_MODEL_PATH:/opt/ros/humble/share/turtlebot3_gazebo/models
+eval "$(register-python-argcomplete3 ros2)"
+eval "$(register-python-argcomplete3 colcon)"
+#isaac sim ros2 bridge
+export FASTRTPS_DEFAULT_PROFILES_FILE=~/.ros/fastdds.xml
+
+# pnpm
+export PNPM_HOME="/home/joe/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+export PATH=/home/joe/.pixi/bin:$PATH
+# just
+if (( $+commands[just] )); then
+  eval "$(just --completions zsh)"
+fi
+
+if [ "$PIXI_IN_SHELL" = "1" ]; then
+  if [ -n "$(just --summary | grep setup)" ]; then
+    . <(just setup)
+  fi
+fi
+
+alias rc=". $HOME/.zshrc"
