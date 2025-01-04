@@ -35,6 +35,7 @@ alias cat="bat"
 alias cd_old="cd"
 alias man_old="man"
 alias man="batman"
+alias rc=". ~/.zshrc"
 
 #zypper
 alias zin='sudo zypper in'
@@ -83,3 +84,7 @@ export FZF_ALT_C_OPTS="--preview 'eza --tree --color=always {} | head -200'"
 #zoxide
 eval "$(zoxide init zsh)"
 alias cd="z"
+
+#poetry
+fpath+=~/.zfunc
+autoload -Uz compinit && compinit
