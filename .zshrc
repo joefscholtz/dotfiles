@@ -60,14 +60,17 @@ alias j="just"
 export ROS_DOMAIN_ID=11
 . /opt/ros/humble/setup.zsh
 #. /home/joe/jaguar_ws/install/local_setup.bash
-. /home/joe/outside_git/ros2_ws/install/local_setup.zsh
-. /home/joe/outside_git/ros2_ws/src/bringup/install/local_setup.zsh
 # . /home/joe/mapping_ws/install/local_setup.bash
 # . /home/joe/outdoor_ws/install/local_setup.bash
 # . /home/joe/ros2_ws/install/local_setup.zsh
 # . /home/joe/livox_ros_driver2_ws/install/local_setup.zsh
-# . /usr/share/gazebo/setup.sh
-# . /usr/share/gazebo-11/setup.sh
+
+# . /home/joe/outside_git/ros2_ws/install/local_setup.zsh
+# . /home/joe/outside_git/ros2_ws/src/bringup/install/local_setup.zsh
+. /home/joe/drc_git/drc_ws/install/local_setup.zsh
+. /home/joe/vba_git/vba_ws/install/local_setup.zsh
+. /usr/share/gazebo/setup.sh
+. /usr/share/gazebo-11/setup.sh
 export TURTLEBOT3_MODEL=waffle
 export GAZEBO_MODEL_PATH=$GAZEBO_MODEL_PATH:/opt/ros/humble/share/turtlebot3_gazebo/models
 eval "$(register-python-argcomplete3 ros2)"
