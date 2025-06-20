@@ -1,7 +1,6 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-
-export PATH=$HOME/.cargo/bin:$HOME/bin:/usr/local/bin:$PATH
+export PATH=/usr/sbin:$HOME/.cargo/bin:$HOME/bin:/usr/local/bin:$PATH
 
 source $HOME/.config/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $HOME/.config/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -52,12 +51,26 @@ alias l='eza --all --color=always --git --icons=always'
 alias ll='eza --all --long --color=always --git --icons=always --group'
 
 #starship
-eval "$(starship init zsh)"
+# Check that the function `starship_zle-keymap-select()` is defined.
+# xref: https://github.com/starship/starship/issues/3418
+type starship_zle-keymap-select >/dev/null || \
+  {
+    eval "$(starship init zsh)"
+  }
 
 # Set up fzf key bindings and fuzzy completion
-eval "$(fzf --zsh)"
-# . /usr/share/fzf/shell/key-bindings.zsh
-# . /usr/share/fzf/shell/completion.zsh
+# eval "$(fzf --zsh)"
+if [ -f /usr/share/fzf/shell/key-bindings.zsh ]; then
+  . /usr/share/fzf/shell/key-bindings.zsh
+# elif [ -f /usr/share/doc/fzf/examples/key-bindings.zsh ]; then
+#   . /usr/share/doc/fzf/examples/key-bindings.zsh
+fi
+
+if [ -f /usr/share/fzf/shell/key-bindings.zsh ]; then
+  . /usr/share/fzf/shell/completion.zsh
+# elif [ -f /usr/share/doc/fzf/examples/key-bindings.zsh ]; then
+#   . /usr/share/doc/fzf/examples/key-bindings.zsh
+fi
 
 # -- Use fd instead of fzf --
 export FZF_DEFAULT_COMMAND="fd --hidden --strip-cwd-prefix --exclude .git -I"
@@ -81,6 +94,12 @@ show_file_or_dir_preview="if [ -d {} ]; then eza --tree --color=always {} | head
 export FZF_CTRL_T_OPTS="--preview '$show_file_or_dir_preview'"
 export FZF_ALT_C_OPTS="--preview 'eza --tree --color=always {} | head -200'"
 
+alias rgf="rg --color=always --line-number --no-heading --smart-case '${*:-}' |
+  fzf --ansi \
+      --color 'hl:-1:underline,hl+:-1:underline:reverse' \
+      --delimiter : \
+      --preview 'bat --color=always {1} --highlight-line {2}' \
+      --preview-window 'up,60%,border-bottom,+{2}+3/3,~3'"
 #zoxide
 eval "$(zoxide init zsh)"
 alias cd="z"
@@ -98,3 +117,32 @@ function y() {
 	fi
 	rm -f -- "$tmp"
 }
+
+#ros
+# eval "$(register-python-argcomplete3 colcon)"
+alias ros="distrobox enter ubuntu2204"
+if [ -f /opt/ros/humble/setup.zsh ]; then
+  . /opt/ros/humble/setup.zsh
+  if [ -f /usr/share/gazebo/setup.sh ]; then
+    . /usr/share/gazebo/setup.sh
+  fi
+  if [ -f /usr/share/gazebo-11/setup.sh ]; then
+    . /usr/share/gazebo-11/setup.sh
+  fi
+
+  eval "$(register-python-argcomplete3 ros2)"
+  eval "$(register-python-argcomplete3 colcon)"
+  export RCUTILS_COLORIZED_OUTPUT=1
+  if [ -f ~/iplow_ws/src/exwayz_navigation/ros2/exwayz/share/exwayz/local_setup.zsh ]; then
+    . ~/iplow_ws/src/exwayz_navigation/ros2/exwayz/share/exwayz/local_setup.zsh
+  fi
+
+  if [ -f /opt/exwayz/exwayz_navigation/ros2/exwayz/share/exwayz/local_setup.zsh ]; then
+    . /opt/exwayz/exwayz_navigation/ros2/exwayz/share/exwayz/local_setup.zsh
+  fi
+
+  if [ -f ~/iplow_ws/install/local_setup.zsh ]; then
+    . ~/iplow_ws/install/local_setup.zsh
+  fi
+fi
+
