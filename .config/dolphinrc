@@ -7,7 +7,7 @@ UsePermissionsFormat=CombinedFormat
 [General]
 ShowFullPathInTitlebar=true
 ShowSelectionToggle=false
-ShowStatusBar=false
+ShowStatusBar=Disabled
 Version=202
 ViewPropsTimestamp=2023,4,26,16,58,48.324
 
@@ -26,7 +26,6 @@ Places Icons Static Size=16
 
 [MainWindow]
 MenuBar=Disabled
-ToolBarsMovable=Disabled
 
 [MainWindow][Toolbar mainToolBar]
 IconSize=16
@@ -43,3 +42,6 @@ Location=Everywhere
 
 [Toolbar mainToolBar]
 ToolButtonStyle=IconOnly
+
+[UiSettings]
+ColorScheme=Theme Name

@@ -11,6 +11,7 @@ text/html=firefox.desktop;
 x-scheme-handler/chrome=firefox.desktop;
 x-scheme-handler/http=firefox.desktop;
 x-scheme-handler/https=firefox.desktop;
+application/x-shellscript=nvim.desktop;
 
 [Default Applications]
 application/x-extension-htm=firefox.desktop
@@ -27,3 +28,4 @@ text/html=firefox.desktop
 x-scheme-handler/chrome=firefox.desktop
 x-scheme-handler/http=firefox.desktop
 x-scheme-handler/https=firefox.desktop
+x-scheme-handler/spotify=com.spotify.Client.desktop
