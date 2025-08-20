@@ -5,4 +5,5 @@ TerminalApplication=kitty
 ShowDeleteCommand=false
 
 [PreviewSettings]
+EnableRemoteFolderThumbnail=false
 MaximumRemoteSize=0

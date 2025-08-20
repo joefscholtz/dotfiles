@@ -12,7 +12,9 @@ Version=202
 ViewPropsTimestamp=2023,4,26,16,58,48.324
 
 [IconsMode]
+IconSize=22
 MaximumTextLines=1
+PreviewSize=22
 
 [InformationPanel]
 dateFormat=ShortFormat
@@ -36,9 +38,6 @@ IconSize=16
 
 [PreviewSettings]
 Plugins=appimagethumbnail,audiothumbnail,comicbookthumbnail,cursorthumbnail,djvuthumbnail,ebookthumbnail,exrthumbnail,imagethumbnail,jpegthumbnail,kraorathumbnail,windowsexethumbnail,windowsimagethumbnail,opendocumentthumbnail,svgthumbnail,ffmpegthumbs
-
-[Search]
-Location=Everywhere
 
 [Toolbar mainToolBar]
 ToolButtonStyle=IconOnly

@@ -49,6 +49,9 @@ alias ls_old='ls'
 alias ls='eza --all --color=always --git --icons=always'
 alias l='eza --all --color=always --git --icons=always'
 alias ll='eza --all --long --color=always --git --icons=always --group'
+alias df='duf'
+
+export PAGER=bat
 
 #starship
 # Check that the function `starship_zle-keymap-select()` is defined.
@@ -146,3 +149,21 @@ if [ -f /opt/ros/humble/setup.zsh ]; then
   fi
 fi
 
+#just
+alias j=just
+alias ji='just install'
+alias jbi='just build-image'
+alias jb='just build'
+alias js='just --list'
+
+#git
+alias gtree='git log --graph --oneline --all'
+alias gs='git status'
+alias ga='git add --all'
+gc(){
+  git commit -m "$@"
+}
+gw(){
+  git commit --no-verify -m "$@"
+}
+alias gp='git push'
