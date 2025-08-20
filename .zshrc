@@ -159,11 +159,9 @@ alias js='just --list'
 #git
 alias gtree='git log --graph --oneline --all'
 alias gs='git status'
-alias ga='git add --all'
+alias ga='git add -all'
 gc(){
   git commit -m "$@"
 }
-gw(){
-  git commit --no-verify -m "$@"
-}
+alias gw="git commit --no-verify -m 'wip'"
 alias gp='git push'
