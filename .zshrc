@@ -1,6 +1,6 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-export PATH=/usr/sbin:$HOME/.cargo/bin:$HOME/bin:/usr/local/bin:$PATH
+export PATH=/usr/sbin:$HOME/.cargo/bin:$HOME/bin:/usr/local/bin:$HOME/depot_tools:$PATH
 
 source $HOME/.config/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $HOME/.config/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -45,11 +45,19 @@ alias zse='sudo zypper se'
 alias zve='sudo zypper ve'
 alias zdup='sudo zypper dup'
 
-alias ls_old='ls'
 alias ls='eza --all --color=always --git --icons=always'
 alias l='eza --all --color=always --git --icons=always'
 alias ll='eza --all --long --color=always --git --icons=always --group'
 alias df='duf'
+tree(){
+  eza -T --icons=always "$@"
+}
+tree-ignore() {
+    git ls-tree -r --name-only HEAD \
+        | grep -v -F -f <(git submodule --quiet foreach 'echo $sm_path') \
+        | eza --git-ignore -T --icons=always "$@"
+}
+alias tre='tre --all'
 
 export PAGER=bat
 
@@ -147,6 +155,10 @@ if [ -f /opt/ros/humble/setup.zsh ]; then
   if [ -f ~/iplow_ws/install/local_setup.zsh ]; then
     . ~/iplow_ws/install/local_setup.zsh
   fi
+  # if [ -f ~/tks_ws/install/local_setup.zsh ]; then
+  #   . ~/tks_ws/install/local_setup.zsh
+  # fi
+  
 fi
 
 #just
@@ -154,14 +166,22 @@ alias j=just
 alias ji='just install'
 alias jbi='just build-image'
 alias jb='just build'
+alias jr='just run'
+alias jre='just rebuild'
+alias jrm='just run'
 alias js='just --list'
 
 #git
 alias gtree='git log --graph --oneline --all'
 alias gs='git status'
-alias ga='git add -all'
+alias ghosts='\gs'
+alias ga='git add --all'
 gc(){
   git commit -m "$@"
 }
-alias gw="git commit --no-verify -m 'wip'"
+alias gw="git commit --no-verify -m \"wip\""
 alias gp='git push'
+export PATH="/home/joe/.pixi/bin:$PATH"
+
+#c++ projects:
+export PKG_CONFIG_PATH=/usr/lib64/pkgconfig:/usr/share/pkgconfig:$PKG_CONFIG_PATH

@@ -1,0 +1,63 @@
+/* This is the main window for our calendar widget */
+.calendar-widget {
+  background-color: #1e1e2e; /* Catppuccin Macchiato Base */
+  color: #cdd6f4; /* Catppuccin Macchiato Text */
+  border: 1px solid #89b4fa; /* Catppuccin Macchiato Blue */
+  border-radius: 12px;
+  padding: 1rem;
+  font-family: "JetBrainsMono Nerd Font";
+}
+
+/* Style the calendar header (e.g., "September 2025") */
+.calendar-header {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #a6e3a1; /* Catppuccin Macchiato Green */
+  margin-bottom: 0.8rem;
+}
+
+/* Style the navigation buttons (< >) in the header */
+.calendar-header button {
+  color: #f5c2e7; /* Catppuccin Macchiato Pink */
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+}
+
+.calendar-header button:hover {
+  color: #fab387; /* Catppuccin Macchiato Peach */
+}
+
+/* Style the day-of-the-week labels (Mo, Tu, We, etc.) */
+.calendar-day-label {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #94e2d5; /* Catppuccin Macchiato Teal */
+  margin-bottom: 0.5rem;
+}
+
+/* Style for each individual day number */
+.calendar-day {
+  color: #cdd6f4;
+  padding: 0.3rem;
+}
+
+/* Style for days that are not in the current month (grayed out) */
+.calendar-day-other-month {
+  color: #45475a; /* Catppuccin Macchiato Surface1 */
+}
+
+/* Highlight the current day */
+.calendar-day-today {
+  color: #1e1e2e;
+  background-color: #89b4fa; /* Catppuccin Macchiato Blue */
+  border-radius: 50%; /* Make it a circle */
+  font-weight: bold;
+}
+
+/* Style for a day when it is selected by clicking */
+.calendar-day-selected {
+  background-color: #f38ba8; /* Catppuccin Macchiato Red */
+  color: #1e1e2e;
+  border-radius: 6px;
+}

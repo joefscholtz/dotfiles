@@ -36,6 +36,33 @@ kitty + tmux preview:
 - sudo zypper in rofi rofi-calc wofi dunst waybar
 - sudo zypper in papirus-icon-theme
 
+### Quickshell
+
+- sudo zypper install -t pattern devel_basis
+- sudo zypper install cmake extra-cmake-modules pkg-config qt6-base-devel \
+  qt6-declarative-devel qt6-wayland-devel wayland-devel wayland-protocols-devel \
+  jemalloc-devel git libQt6ShaderTools6 qt6-shadertools qt6-shadertools-devel \
+  cli11-devel
+- cd ~ && git clone https://chromium.googlesource.com/chromium/tools/depot_tools.git
+- export PATH=~/depot_tools:$PATH
+- cd ~ && git clone https://chromium.googlesource.com/breakpad/breakpad
+- cd breakpad && ./configure
+- gclient config --deps-file=DEPS --name=. https://chromium.googlesource.com/breakpad/breakpad
+- See BREAKPAD_DEPS
+- gclient sync
+- make
+- sudo make install
+- cd ~ && git clone https://git.outfoxxed.me/quickshell/quickshell.git
+- cd quicksell
+- cmake -GNinja -B build -DCMAKE_BUILD_TYPE=RelWithDebInfo
+- cmake --build build
+- cmake --install build
+- <!-- - sudo zypper install guix -->
+  <!-- - sudo systemctl start guix-daemon.service -->
+  <!-- - sudo systemctl enable guix-daemon.service -->
+  <!-- - guix pull -->
+  <!-- - guix install quickshell -->
+
 ### Utils
 
 sudo zypper in cheese scrcpy
