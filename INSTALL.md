@@ -5,6 +5,7 @@
 - [Arch Wiki's installation guide](https://wiki.archlinux.org/title/Installation_guide)
 - [Dreams of Autonomy: How I Install Arch Linux (the hard way).](https://www.youtube.com/watch?v=YC7NMbl4goo&t=2s)
 - [Learn Linux TV: How To Install Arch Linux The First Time - Complete Walkthrough](https://www.youtube.com/watch?v=FxeriGuJKTM)
+- [Arch Linux Post-Install Guide Linux Security Tutorial](https://www.youtube.com/watch?v=8Oz4CIB4YjU)
 
 ## Partitioning Data
 
