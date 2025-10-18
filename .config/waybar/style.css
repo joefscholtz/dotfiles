@@ -121,7 +121,7 @@ tooltip {
 #custom-rr_end {
   color: @main-fg;
   background: @main-bg;
-  opacity: 1;
+  opacity: 0.9;
   margin: 4px 0px 4px 0px;
   padding-left: 4px;
   padding-right: 4px;
@@ -130,6 +130,10 @@ tooltip {
 #workspaces,
 #taskbar {
   padding: 0px;
+}
+
+#memory {
+  min-width: 100px;
 }
 
 #custom-r_end {

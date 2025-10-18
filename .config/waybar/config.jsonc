@@ -48,10 +48,10 @@
     "tray",
     "cpu",
     "memory",
-    // "custom/gpuinfo",
+    "custom/gpuinfo",
     "backlight",
     "network",
-    // "pulseaudio",
+    "pulseaudio",
     // "pulseaudio#microphone",
     // "custom/notifications",
     // "custom/keybindhint",
@@ -212,12 +212,12 @@
 
   "cpu": {
     "interval": 1,
-    "format": "󰍛 {usage}%",
+    "format": "󰍛 CPU:{usage}%",
     "rotate": 0,
   },
   "memory": {
     "interval": 1,
-    "format": " {used}GB",
+    "format": " RAM:{used}GB",
     "rotate": 0,
     "max-length": 10,
     "tooltip": true,
@@ -232,7 +232,7 @@
     "interval": 2, // once every 5 seconds
     "tooltip": true,
     "max-length": 1000,
-    "on-click": "gpuinfo.sh --toggle",
+    // "on-click": "gpuinfo.sh --toggle",
   },
 
   "custom/gpuinfo#nvidia": {
