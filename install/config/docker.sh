@@ -17,10 +17,12 @@ echo -e '[Resolve]\nDNSStubListenerExtra=172.17.0.1' | sudo tee /etc/systemd/res
 sudo systemctl restart systemd-resolved
 
 # Start Docker automatically
-sudo systemctl enable docker
+sudo systemctl enable --now docker
 
 # Give this user privileged Docker access
+sudo groupadd docker
 sudo usermod -aG docker ${USER}
+newgrp docker
 
 # Prevent Docker from preventing boot for network-online.target
 sudo mkdir -p /etc/systemd/system/docker.service.d

@@ -146,7 +146,6 @@ catch_errors() {
 exit_handler() {
   local exit_code=$?
 
-  echo $exit_code
   # Only run if we're exiting with an error and haven't already handled it
   if [[ $exit_code -ne 0 && $ERROR_HANDLING != true ]]; then
     catch_errors
