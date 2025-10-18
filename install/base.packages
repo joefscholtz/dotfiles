@@ -1,0 +1,141 @@
+# 1password-beta
+# 1password-cli
+kitty
+avahi
+bash-completion
+bat
+bat-extras
+blueberry
+brightnessctl
+btop
+cargo
+clang
+cups
+cups-browsed
+cups-filters
+cups-pdf
+docker
+docker-buildx
+docker-compose
+distrobox
+dust
+evince
+eza
+fastfetch
+fcitx5
+fcitx5-gtk
+fcitx5-qt
+fd
+ffmpegthumbnailer
+fontconfig
+fzf
+# fzf-tmux
+github-cli
+gnome-calculator
+gnome-keyring
+gnome-themes-extra
+gum
+# gvfs-mtp
+# gvfs-smb
+hypridle
+# hyprland
+hyprland-qtutils
+hyprlock
+hyprpicker
+hyprshot
+hyprpaper
+imagemagick
+impala
+imv
+loupe
+inetutils
+iwd
+jq
+kdenlive
+kvantum-qt5
+lazydocker
+lazygit
+less
+libyaml
+libqalculate
+libreoffice
+llvm
+# localsend #TODO: Install with the AUR 
+luarocks
+mako
+man
+mise
+mpv
+nautilus
+dolphin
+noto-fonts
+noto-fonts-cjk
+noto-fonts-emoji
+noto-fonts-extra
+nss-mdns
+nvim
+obs-studio
+obsidian
+pamixer
+papirus-icon-theme
+# pinta
+gimp
+plocate
+plymouth
+polkit-gnome
+power-profiles-daemon
+python-gobject
+python-poetry-core
+#python-terminaltexteffects  #TODO: Install with the AUR 
+qt5-wayland
+ripgrep
+rofi
+rofi-calc
+wofi
+satty
+signal-desktop
+slurp
+starship
+sushi
+scrcpy
+# swaybg
+# swayosd
+system-config-printer
+stow
+tldr
+tmux
+tree-sitter-cli
+ttf-cascadia-mono-nerd
+# ttf-ia-writer
+ttf-jetbrains-mono-nerd
+# typora #TODO: Install with the AUR
+# tzupdate #TODO: cargo install tzupdate
+ufw
+#ufw-docker #TODO: Install with the AUR 
+unzip
+uv
+uwsm
+w3m
+#walker-bin  #TODO: Install with the AUR 
+waybar
+wf-recorder
+whois
+wireless-regdb
+wiremix
+wireplumber
+# wl-clip-persist
+wl-clipboard
+# wl-screenrec  #TODO: Install with the AUR 
+woff2-font-awesome
+xdg-desktop-portal-gtk
+xdg-desktop-portal-hyprland
+xmlstarlet
+xournalpp
+# yaru-icon-theme
+yazi
+zoxide
+# vieb
+cheese
+okular
+pdfarranger
+just
