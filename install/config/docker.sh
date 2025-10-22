@@ -6,8 +6,6 @@ sudo tee /etc/docker/daemon.json >/dev/null <<'EOF'
 {
     "log-driver": "json-file",
     "log-opts": { "max-size": "10m", "max-file": "5" },
-    "dns": ["172.17.0.1"],
-    "bip": "172.17.0.1/16"
 }
 EOF
 

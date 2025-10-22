@@ -147,3 +147,4 @@ pavucontrol
 # qpwgraph
 # zen-browser-bin #TODO: AUR
 btrfs-progs
+wget
