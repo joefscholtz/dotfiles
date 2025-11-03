@@ -1,5 +1,7 @@
 #!/usr/bin/env zsh
 
+## https://github.com/Zellington3/Ghost-Monitor-Wayvnc-Hyprland
+
 # === CONFIG ===
 VIRTUAL_MONITOR="HEADLESS-1"
 VIRTUAL_WORKSPACE=6
