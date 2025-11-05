@@ -2,3 +2,5 @@ wayvnc
 remmina
 openssh
 ufw
+libvncserver
+tailscale

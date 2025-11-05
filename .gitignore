@@ -4,3 +4,8 @@ build
 .zfunc
 omarchy
 **yay/
+.local/**
+!.local/share/
+!.local/share/applications/
+!.local/share/applications/mimeinfo.cache
+!.local/share/applications/vieb.desktop
