@@ -1,6 +1,6 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-export PATH=/usr/sbin:$HOME/.cargo/bin:$HOME/bin:/usr/local/bin:$HOME/depot_tools:$PATH
+export PATH=/usr/sbin:$HOME/.cargo/bin:$HOME/bin:/usr/local/bin:$HOME/depot_tools:$HOME/.local/bin:$PATH
 
 source $HOME/.config/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $HOME/.config/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

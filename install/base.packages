@@ -53,7 +53,7 @@ iwd
 jq
 kdenlive
 kvantum-qt5
-lazydocker
+# lazydocker
 lazygit
 less
 libyaml
@@ -84,6 +84,7 @@ plocate
 plymouth
 polkit-gnome
 power-profiles-daemon
+python-pipx
 python-gobject
 python-poetry-core
 #python-terminaltexteffects  #TODO: Install with the AUR 

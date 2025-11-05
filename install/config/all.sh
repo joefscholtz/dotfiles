@@ -11,8 +11,8 @@
 # run_logged $DOTS_INSTALL/config/xcompose.sh
 # run_logged $DOTS_INSTALL/config/mise-work.sh
 # run_logged $DOTS_INSTALL/config/fix-powerprofilesctl-shebang.sh
-run_logged $DOTS_INSTALL/config/docker.sh
-run_logged $DOTS_INSTALL/config/mimetypes.sh
+. $DOTS_INSTALL/config/docker.sh
+. $DOTS_INSTALL/config/mimetypes.sh
 # run_logged $DOTS_INSTALL/config/localdb.sh
 # run_logged $DOTS_INSTALL/config/sudoless-asdcontrol.sh
 # run_logged $DOTS_INSTALL/config/hardware/network.sh

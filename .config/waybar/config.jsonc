@@ -42,10 +42,10 @@
   "modules-right": [
     "custom/padd",
     "custom/l_end",
-    // "battery",
     // "custom/r_end",
     // "custom/l_end",
     "tray",
+    "battery",
     "cpu",
     "memory",
     "custom/gpuinfo",
