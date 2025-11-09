@@ -19,11 +19,11 @@ keymap("n", "X", '"_X', { desc = "Delete char back (black hole)" })
 
 -- 2. Map _d, _c, _x to the *original* behavior
 -- This makes them explicitly use the unnamed register ("") to save the text
-keymap({ "n", "v" }, "_d", '""d', { desc = "Delete (to yank buffer)" })
-keymap({ "n", "v" }, "_c", '""c', { desc = "Change (to yank buffer)" })
-keymap({ "n", "v" }, "_x", '""x', { desc = "Delete char (to yank buffer)" })
-
--- You can also add uppercase variants if you use them
-keymap("n", "_D", '""D', { desc = "Delete to EOL (to yank buffer)" })
-keymap("n", "_C", '""C', { desc = "Change to EOL (to yank buffer)" })
-keymap("n", "_X", '""X', { desc = "Delete char back (to yank buffer)" })
+-- keymap({ "n", "v" }, "_d", '""d', { desc = "Delete (to yank buffer)" })
+-- keymap({ "n", "v" }, "_c", '""c', { desc = "Change (to yank buffer)" })
+-- keymap({ "n", "v" }, "_x", '""x', { desc = "Delete char (to yank buffer)" })
+--
+-- -- You can also add uppercase variants if you use them
+-- keymap("n", "_D", '""D', { desc = "Delete to EOL (to yank buffer)" })
+-- keymap("n", "_C", '""C', { desc = "Change to EOL (to yank buffer)" })
+-- keymap("n", "_X", '""X', { desc = "Delete char back (to yank buffer)" })

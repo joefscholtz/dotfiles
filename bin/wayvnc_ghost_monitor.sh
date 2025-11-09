@@ -3,7 +3,7 @@
 ## https://github.com/Zellington3/Ghost-Monitor-Wayvnc-Hyprland
 
 # === CONFIG ===
-VIRTUAL_MONITOR="HEADLESS-1"
+VIRTUAL_MONITOR="HEADLESS-2"
 VIRTUAL_WORKSPACE=6
 
 # === Auto-detect Real Monitor ===
@@ -35,7 +35,7 @@ trap cleanup INT TERM EXIT
 # === Check if HEADLESS-2 is already active, create it if not ===
 if ! hyprctl monitors | grep -q "$VIRTUAL_MONITOR"; then
   echo "[wayvnc] Creating $VIRTUAL_MONITOR dynamically..."
-  hyprctl output create headless
+  hyprctl output create headless $VIRTUAL_MONITOR
   sleep 0.5
 fi
 
