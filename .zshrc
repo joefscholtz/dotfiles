@@ -1,6 +1,6 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-export PATH=/usr/sbin:$HOME/.cargo/bin:$HOME/bin:/usr/local/bin:$HOME/depot_tools:$PATH
+export PATH=/usr/sbin:$HOME/.cargo/env:$HOME/.cargo/bin:$HOME/bin:/usr/local/bin:$HOME/depot_tools:$PATH
 
 source $HOME/.config/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $HOME/.config/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -130,10 +130,10 @@ function y() {
 }
 
 #ros
-# eval "$(register-python-argcomplete3 colcon)"
-alias ros="distrobox enter ubuntu2204"
-if [ -f /opt/ros/humble/setup.zsh ]; then
-  . /opt/ros/humble/setup.zsh
+alias ros="distrobox enter ubuntu2404"
+ROS_ACTIVE_DISTRO="jazzy"
+if [ -f /opt/ros/${ROS_ACTIVE_DISTRO}/setup.zsh ]; then
+  . /opt/ros/${ROS_ACTIVE_DISTRO}/setup.zsh
   if [ -f /usr/share/gazebo/setup.sh ]; then
     . /usr/share/gazebo/setup.sh
   fi
@@ -141,8 +141,8 @@ if [ -f /opt/ros/humble/setup.zsh ]; then
     . /usr/share/gazebo-11/setup.sh
   fi
 
-  eval "$(register-python-argcomplete3 ros2)"
-  eval "$(register-python-argcomplete3 colcon)"
+  eval "$(register-python-argcomplete ros2)"
+  eval "$(register-python-argcomplete colcon)"
   export RCUTILS_COLORIZED_OUTPUT=1
   if [ -f ~/iplow_ws/src/exwayz_navigation/ros2/exwayz/share/exwayz/local_setup.zsh ]; then
     . ~/iplow_ws/src/exwayz_navigation/ros2/exwayz/share/exwayz/local_setup.zsh
@@ -155,9 +155,9 @@ if [ -f /opt/ros/humble/setup.zsh ]; then
   if [ -f ~/iplow_ws/install/local_setup.zsh ]; then
     . ~/iplow_ws/install/local_setup.zsh
   fi
-  # if [ -f ~/tks_ws/install/local_setup.zsh ]; then
-  #   . ~/tks_ws/install/local_setup.zsh
-  # fi
+  if [ -f ~/tracftec/ttec_ws/install/local_setup.zsh ]; then
+    . ~/tracftec/ttec_ws/install/local_setup.zsh
+  fi
   
 fi
 
@@ -185,3 +185,6 @@ export PATH="/home/joe/.pixi/bin:$PATH"
 
 #c++ projects:
 export PKG_CONFIG_PATH=/usr/lib64/pkgconfig:/usr/share/pkgconfig:$PKG_CONFIG_PATH
+
+#general
+alias open="xdg-open"
