@@ -188,3 +188,6 @@ export PKG_CONFIG_PATH=/usr/lib64/pkgconfig:/usr/share/pkgconfig:$PKG_CONFIG_PAT
 
 #general
 alias open="xdg-open"
+
+#tmux
+alias t="tmux a"
