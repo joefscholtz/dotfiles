@@ -149,3 +149,5 @@ pavucontrol
 # zen-browser-bin #TODO: AUR
 btrfs-progs
 wget
+meson
+cpio
