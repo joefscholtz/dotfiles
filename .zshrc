@@ -190,4 +190,7 @@ export PKG_CONFIG_PATH=/usr/lib64/pkgconfig:/usr/share/pkgconfig:$PKG_CONFIG_PAT
 alias open="xdg-open"
 
 #tmux
-alias t="tmux a"
+alias t="tmux_tui.sh"
+
+#tailscale
+alias remote="tailscale_remote_ssh.sh"

@@ -142,6 +142,7 @@ pdfarranger
 just
 bluez
 bluez-utils
+pipewire
 pipewire-pulse
 pavucontrol
 # helvum
@@ -151,3 +152,4 @@ btrfs-progs
 wget
 meson
 cpio
+croc
