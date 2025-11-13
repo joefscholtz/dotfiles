@@ -156,3 +156,11 @@ Bash
 
 ssh -L 5900:localhost:5900 your_desktop_user@YOUR_PUBLIC_IP
 Open Remmina and connect to localhost:5900.
+
+
+## tailscale
+
+sudo systemctl enable --now tailscaled.service
+
+tailscale ip -4
+
