@@ -198,3 +198,9 @@ alias remote="tailscale_remote_ssh.sh"
 #conceptu
 export PATH=$HOME/conceptu/conceptu-git/vpn:$PATH
 alias vpn="fortivpn.sh"
+
+## [Completion]
+## Completion scripts setup. Remove the following line to uninstall
+[[ -f /home/joe/.dart-cli-completion/zsh-config.zsh ]] && . /home/joe/.dart-cli-completion/zsh-config.zsh || true
+## [/Completion]
+
