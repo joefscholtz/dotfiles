@@ -1,9 +1,10 @@
 version = "1.1.16"
+
 [format]
 delim = " "
-client = "{icon}{delim}"
-client_active = "{icon}{delim}"
-workspace = "<b><span color='red'>{id}:</span></b>{delim}{clients}"
+client = "{icon}"
+client_active = "{icon}"
+workspace = "{id}{delim}<b>{clients}{delim}</b>"
 
 [workspaces_name]
 0 = "zero"
@@ -18,13 +19,17 @@ workspace = "<b><span color='red'>{id}:</span></b>{delim}{clients}"
 9 = "nine"
 10 = "ten"
 
+[class_active]
+DEFAULT = "{class}"
+
 [class]
 DEFAULT = ""
 # "(?i)firefox" = "<span color='orange'> </span>"
 "(?i)firefox" = ""
 "(?i)chrom*" = ""
-"(?i)kitty" = "󰄛"
+"(?i)kitty" = ""
 "(?i)alacritty" = ""
+blueberry = ""
 bleachbit = ""
 burp-startburp = ""
 calibre-gui = ""
@@ -57,6 +62,7 @@ libreoffice-impress = ""
 libreoffice-startcenter = ""
 libreoffice-writer = ""
 molotov = ""
+gimp = ""
 mpv = ""
 neomutt = ""
 nm-connection-editor = ""
@@ -65,7 +71,7 @@ org-pwmt-zathura = ""
 org-qutebrowser-qutebrowser = ""
 org-telegram-desktop = ""
 paperwork = ""
-pavucontrol = ""
+pavucontrol = ""
 personal = ""
 plexamp = ""
 qutepreview = ""
@@ -101,6 +107,7 @@ work = ""
 xplr = ""
 nemo = ""
 zoom = ""
+"(?i)obs" = ""
 
 [exclude]
 "" = "^$" # prevent displaying clients with empty class

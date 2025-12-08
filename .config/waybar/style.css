@@ -21,15 +21,17 @@ tooltip {
 }
 
 #workspaces button {
+  background: @main-bg;
   box-shadow: none;
   text-shadow: none;
-  padding: 0px;
-  border-radius: 9px;
+  border: 1px solid @main-fg;
+  border-radius: 8px;
   margin-top: 3px;
   margin-bottom: 3px;
-  margin-left: 0px;
-  padding-left: 3px;
-  padding-right: 10px;
+  margin-left: 1px;
+  padding: 0px;
+  padding-left: 5px;
+  padding-right: 5px;
   margin-right: 5px;
   color: @main-fg;
   animation: ws_normal 20s ease-in-out 1;
@@ -38,10 +40,10 @@ tooltip {
 #workspaces button.active {
   background: @wb-act-bg;
   color: @wb-act-fg;
-  margin-left: 3px;
-  padding-left: 12px;
-  padding-right: 20px;
-  margin-right: 3px;
+  padding: 0px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-right: 5px;
   animation: ws_active 20s ease-in-out 1;
   transition: all 0.4s cubic-bezier(0.55, -0.68, 0.48, 1.682);
 }
