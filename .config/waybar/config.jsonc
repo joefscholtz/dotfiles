@@ -71,6 +71,11 @@
     "size": 20,
     "interval": 5,
   },
+
+  "hyprland/workspaces": {
+      "format": "{name}",
+  },
+
   "custom/power": {
     "format": "{}",
     "rotate": 0,
