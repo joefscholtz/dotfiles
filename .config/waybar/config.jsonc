@@ -165,7 +165,7 @@
   },
 
   "clock": {
-    "format": "{:%T 󰃭 %Y·%m·%d}",
+    "format": "{:%Y·%m·%d 󰃭 %T}",
     "rotate": 0,
     "interval": 1,
     "tooltip-format": "<tt>{calendar}</tt>",
