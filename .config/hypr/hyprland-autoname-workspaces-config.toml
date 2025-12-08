@@ -108,6 +108,7 @@ xplr = ""
 nemo = ""
 zoom = ""
 "(?i)obs" = ""
+"zathura" = ""
 
 [exclude]
 "" = "^$" # prevent displaying clients with empty class
