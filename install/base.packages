@@ -80,6 +80,7 @@ pamixer
 papirus-icon-theme
 # pinta
 gimp
+inkscape
 plocate
 plymouth
 polkit-gnome
