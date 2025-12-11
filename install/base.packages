@@ -80,6 +80,7 @@ pamixer
 papirus-icon-theme
 # pinta
 gimp
+inkscape
 plocate
 plymouth
 polkit-gnome
@@ -158,4 +159,3 @@ dosfstools
 zathura
 zathura-pdf-mupdf
 texlive
-inkscape
