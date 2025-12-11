@@ -17,7 +17,8 @@
   "modules-left": [
     "custom/padd",
     "custom/l_end",
-    "image#os-logo",
+    // "image#os-logo",
+    "custom/icon_os",
     "hyprland/workspaces",
     "custom/r_end",
     // "custom/wbar",
@@ -61,8 +62,6 @@
     "custom/padd",
   ],
 
-  // sourced from modules based on config.ctl //
-
   "image#os-logo": {
     "path": "/home/joe/.config/assets/arch.png",
     // "on-click": "rofi -show drun",
@@ -72,8 +71,18 @@
     "interval": 5,
   },
 
+  "custom/icon_os": {
+    "format": "󰣇",
+    "rotate": 0,
+    "on-click": "rofi -modes 'drun,calc,window' -show 'drun' -config $HOME/.config/rofi/config.rasi",
+    "on-click-right": "killall rofi",
+    "interval": 86400, // once every day
+    "tooltip": true,
+    "tooltip-format": "Run applications",
+  },
+
   "hyprland/workspaces": {
-      "format": "{name}",
+    "format": "{name}",
   },
 
   "custom/power": {

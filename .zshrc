@@ -195,6 +195,9 @@ alias t="tmux_tui.sh"
 #tailscale
 alias remote="tailscale_remote_ssh.sh"
 
+#stirling pdf
+alias pdf="stirling_pdf.sh"
+
 #conceptu
 export PATH=$HOME/conceptu/conceptu-git/vpn:$PATH
 alias vpn="fortivpn.sh"
