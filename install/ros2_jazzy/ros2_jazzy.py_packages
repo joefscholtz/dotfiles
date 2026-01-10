@@ -1,0 +1,24 @@
+mypy
+pip
+colcon-common-extensions
+mypy
+pip
+pydocstyle
+pytest
+pytest-cov
+pytest-mock
+pytest-repeat
+pytest-rerunfailures
+pytest-runner
+rosdep
+setuptools
+vcstool
+flake8-blind-except==0.1.1
+flake8-class-newline
+flake8-deprecated
+flake8-quotes
+jsonschema
+# pygraphviz
+rospkg
+# babeltrace
+# PyKDL

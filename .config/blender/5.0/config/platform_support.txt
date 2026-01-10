@@ -1,0 +1,2 @@
+{Mesa/llvmpipe (LLVM 21.1.6, 256 bits)/4.5 (Core Profile) Mesa 25.3.3-arch1.1}=SUPPORTED
+{NVIDIA Corporation/NVIDIA GeForce RTX 5050/PCIe/SSE2/4.6.0 NVIDIA 590.48.01}=SUPPORTED

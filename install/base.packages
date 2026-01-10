@@ -51,7 +51,6 @@ loupe
 inetutils
 iwd
 jq
-kdenlive
 kvantum-qt5
 # lazydocker
 lazygit
@@ -159,3 +158,5 @@ dosfstools
 zathura
 zathura-pdf-mupdf
 texlive
+texlive-langportuguese
+glxinfo

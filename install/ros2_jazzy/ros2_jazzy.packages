@@ -1,0 +1,8 @@
+patch
+cmake
+gcc
+git
+make
+patch
+wget
+graphviz

@@ -109,6 +109,8 @@ zoom = ""
 "(?i)obs" = ""
 "zathura" = ""
 "dolphin" = ""
+"(?i)matplotlib" = ""
+"(?i)kdenlive" = ""
 
 [exclude]
 "" = "^$" # prevent displaying clients with empty class
