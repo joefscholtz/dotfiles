@@ -111,6 +111,8 @@ zoom = ""
 "dolphin" = ""
 "(?i)matplotlib" = ""
 "(?i)kdenlive" = ""
+"blender" = ""
+"okular" = "󰈦"
 
 [exclude]
 "" = "^$" # prevent displaying clients with empty class

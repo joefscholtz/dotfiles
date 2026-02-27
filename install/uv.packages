@@ -1,0 +1,1 @@
+uv tool install --python 3.12 aider-chat@latest

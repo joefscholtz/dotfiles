@@ -11,6 +11,8 @@ sudo ufw allow 22/tcp
 
 # Allow Docker containers to use DNS on host
 sudo ufw allow in proto udp from 172.16.0.0/12 to 172.17.0.1 port 53 comment 'allow-docker-dns'
+sudo iptables -I INPUT -i docker0 -j ACCEPT
+sudo ufw allow in on docker0
 
 # Turn on the firewall
 sudo ufw --force enable
