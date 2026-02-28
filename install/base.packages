@@ -5,7 +5,7 @@ avahi
 bash-completion
 bat
 bat-extras
-blueberry
+# blueberry
 brightnessctl
 btop
 cargo
@@ -39,7 +39,7 @@ gum
 # gvfs-smb
 hypridle
 # hyprland
-hyprland-qtutils
+# hyprland-qtutils
 hyprlock
 hyprpicker
 hyprshot
@@ -136,7 +136,7 @@ xournalpp
 yazi
 zoxide
 # vieb
-cheese
+# cheese
 okular
 pdfarranger
 just
