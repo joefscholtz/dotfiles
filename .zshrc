@@ -161,6 +161,8 @@ if [ -f /opt/ros/${ROS_ACTIVE_DISTRO}/setup.zsh ]; then
   
 fi
 
+export XAUTHORITY=$HOME/.Xauthority
+
 #just
 alias j=just
 alias ji='just install'

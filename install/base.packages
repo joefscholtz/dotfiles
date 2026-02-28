@@ -5,7 +5,6 @@ avahi
 bash-completion
 bat
 bat-extras
-# blueberry
 brightnessctl
 btop
 cargo
@@ -38,8 +37,7 @@ gum
 # gvfs-mtp
 # gvfs-smb
 hypridle
-# hyprland
-# hyprland-qtutils
+hyprland
 hyprlock
 hyprpicker
 hyprshot
@@ -160,3 +158,8 @@ zathura-pdf-mupdf
 texlive
 texlive-langportuguese
 glxinfo
+xorg-xhost
+rsync
+flatpak
+firefox
+cmake
