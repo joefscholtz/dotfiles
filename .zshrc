@@ -29,6 +29,9 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 
 #aliases
 alias nv="nvim"
+if command -v batcat >/dev/null 2>&1; then
+    alias bat='batcat'
+fi
 export BAT_THEME=Dracula
 alias cat="bat"
 alias cd_old="cd"
