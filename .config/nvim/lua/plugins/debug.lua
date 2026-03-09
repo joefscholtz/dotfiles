@@ -59,7 +59,7 @@ return {
       },
       {
         -- Ensure C/C++ debugger is installed
-        "williamboman/mason.nvim",
+        "mason-org/mason.nvim",
         optional = true,
         opts = function(_, opts)
           if type(opts.ensure_installed) == "table" then
@@ -79,7 +79,7 @@ return {
         "folke/which-key.nvim",
         optional = true,
         opts = {
-          defaults = {
+          spec = {
             ["<leader>d"] = { name = "+debug" },
           },
         },
@@ -182,7 +182,7 @@ return {
     end,
   },
   {
-    "williamboman/mason.nvim",
+    "mason-org/mason.nvim",
     opts = {
       ensure_installed = {
         "debugpy",

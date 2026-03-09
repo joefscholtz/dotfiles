@@ -1,6 +1,6 @@
 return {
   {
-    "williamboman/mason.nvim",
+    "mason-org/mason.nvim",
     opts = {
       ensure_installed = {
         "python-lsp-server",
@@ -13,16 +13,8 @@ return {
   {
     "neovim/nvim-lspconfig",
     opts = {
-      format = { timeout_ms = 10000 }
-    }
-  },
-  {
-    "nvimtools/none-ls.nvim",
-    opts = function(_, opts)
-      local nls = require("null-ls")
-      opts.sources = opts.sources or {}
-      table.insert(opts.sources, nls.builtins.formatting.black)
-    end,
+      format = { timeout_ms = 10000 },
+    },
   },
   {
     "stevearc/conform.nvim",
@@ -31,5 +23,5 @@ return {
         ["python"] = { "black" },
       },
     },
-  }
+  },
 }
