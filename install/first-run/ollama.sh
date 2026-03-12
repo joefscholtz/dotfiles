@@ -15,3 +15,7 @@ sleep 10
 ollama pull deepseek-coder-v2:16b
 
 ollama pull deepseek-r1:14b
+
+ollama pull qwen3.5:0.8b
+
+ollama pull qwen3-coder:30b
