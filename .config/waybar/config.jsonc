@@ -239,7 +239,7 @@
   },
 
   "custom/gpuinfo": {
-    "exec": " gpuinfo.sh",
+    "exec": "gpuinfo.sh",
     "return-type": "json",
     "format": "{}",
     "rotate": 0,
