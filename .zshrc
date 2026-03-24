@@ -193,6 +193,7 @@ export PKG_CONFIG_PATH=/usr/lib64/pkgconfig:/usr/share/pkgconfig:$PKG_CONFIG_PAT
 
 #general
 alias open="xdg-open"
+alias timestamp="date +\"%Y_%m_%d_%H_%M_%S\""
 
 #tmux
 alias t="tmux_tui.sh"
