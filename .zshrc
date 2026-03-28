@@ -194,6 +194,16 @@ export PKG_CONFIG_PATH=/usr/lib64/pkgconfig:/usr/share/pkgconfig:$PKG_CONFIG_PAT
 #general
 alias open="xdg-open"
 alias timestamp="date +\"%Y_%m_%d_%H_%M_%S\""
+sanitize_filename() {
+  printf "%s" "$1" \
+    | iconv -f utf-8 -t ascii//translit 2>/dev/null \
+    | tr '[:upper:]' '[:lower:]' \
+    | sed -E 's/[^a-z0-9._-]+/_/g; s/^[-_]+|[-_]+$//g'
+}
+snake(){
+  ccase -t snake "$(sanitize_filename "$*")" | tr -d '\n' | wl-copy
+}
+
 
 #tmux
 alias t="tmux_tui.sh"
