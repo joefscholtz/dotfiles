@@ -11,7 +11,6 @@ COUNT=$(hyprctl monitors -j | jq 'length')
 
 # 3. Build Input
 # Format: Name\0icon\x1fPath
-# We bypass Bash variable limitations by writing to a file
 ROFI_INPUT_FILE="$TEMP_DIR/input.txt"
 >"$ROFI_INPUT_FILE"
 
