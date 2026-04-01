@@ -113,6 +113,7 @@ zoom = ""
 "(?i)kdenlive" = ""
 "blender" = ""
 "okular" = "󰈦"
+"scrcpy" = "󰦧"
 
 [exclude]
 "" = "^$" # prevent displaying clients with empty class
