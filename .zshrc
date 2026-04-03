@@ -223,6 +223,9 @@ alias vpn="fortivpn.sh"
 [[ -f /home/joe/.dart-cli-completion/zsh-config.zsh ]] && . /home/joe/.dart-cli-completion/zsh-config.zsh || true
 ## [/Completion]
 
+#lamma.cpp
+export PATH=$HOME/llama.cpp/build/bin/:$PATH
+
 #Ollama
 export OLLAMA_API_BASE=http://127.0.0.1:11434
 #autoapply
