@@ -171,3 +171,9 @@ kdegraphics-thumbnailers
 kimageformats
 ffmpegthumbs
 libappimage
+quickshell
+virt-manager
+libvirt
+qemu-full
+dnsmasq
+iptables-nft

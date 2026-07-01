@@ -20,6 +20,22 @@
           "name": "lfm2"
         }
       }
+    },
+    "llamacpp": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "llama.cpp (local)",
+      "options": {
+        "baseURL": "http://localhost:8080/v1"
+      },
+      "models": {
+        "Qwen3.5-35B-A3B-Q4_K_M.gguf": {
+          "name": "Qwen3.5-35B-A3B-Q4_K_M.gguf",
+          "limit": {
+            "context": 160000,
+            "output": 65536
+          }
+        }
+      }
     }
   }
 }

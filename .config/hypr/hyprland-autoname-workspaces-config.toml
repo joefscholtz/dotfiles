@@ -114,6 +114,7 @@ zoom = ""
 "blender" = ""
 "okular" = "󰈦"
 "scrcpy" = "󰦧"
+"python" = ""
 
 [exclude]
 "" = "^$" # prevent displaying clients with empty class

@@ -234,3 +234,12 @@ export CHROME_PATH=/var/lib/flatpak/exports/bin/com.google.Chrome
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+#
+export WOKWI_CLI_TOKEN=wok_3hAp4tzsGzbnaKfnTy4HL4pCtuAb2rg39b51123e
+
+#tablet
+alias tablet="scrcpy & disown"
+
+#virt-manager
+export LIBVIRT_DEFAULT_URI="qemu:///system"
