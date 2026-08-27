@@ -1,4 +1,5 @@
 [Added Associations]
+application/pdf=zathura.desktop;
 application/x-extension-htm=firefox.desktop;
 application/x-extension-html=firefox.desktop;
 application/x-extension-shtml=firefox.desktop;
@@ -16,7 +17,7 @@ x-scheme-handler/https=firefox.desktop;
 
 [Default Applications]
 application/ogg=mpv.desktop
-application/pdf=org.gnome.Evince.desktop
+application/pdf=zathura.desktop;
 application/x-extension-htm=firefox.desktop
 application/x-extension-html=firefox.desktop
 application/x-extension-shtml=firefox.desktop

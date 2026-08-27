@@ -3,3 +3,4 @@ git config --global user.email "joefscholtz@gmail.com"
 git config --global pull.rebase false #TODO: check if ff only is better as default
 git config --global core.autocrlf input
 git config --global core.editor "vim"
+git config --global --add --bool push.autoSetupRemote true #git config --global set push.autoSetupRemote true
