@@ -5,6 +5,7 @@
 local keymap = vim.keymap.set
 
 keymap("n", "<leader>by", "<Cmd>let @+ = expand('%:p')<CR>", { desc = "Yank absolute buffer path" })
+keymap("n", "<leader>bY", "<Cmd>let @+ = expand('%:.')<CR>", { desc = "Yank relative buffer path" })
 
 -- 1. Make d, c, x use the black hole register ("_") by default
 -- This stops them from overwriting your yank buffer
