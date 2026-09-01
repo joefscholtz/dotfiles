@@ -179,7 +179,7 @@ hl.bind(mainMod .. " + " .. "B", hl.dsp.exec_cmd('[workspace special:kittybtop,t
 hl.bind(mainMod .. " + " .. "Q", hl.dsp.window.close())
 hl.bind(mainMod .. " + " .. "X", hl.dsp.window.close())
 hl.bind(mainMod .. " + " .. "T", hl.dsp.exec_cmd('kitty --class "kitty"'))
-hl.bind(mainMod .. " + " .. "Y", hl.dsp.exec_cmd("restart_waybar.sh"))
+hl.bind(mainMod .. " + " .. "Y", hl.dsp.exec_cmd("sh -c 'killall waybar; sleep 0.2; waybar &'"))
 hl.bind(mainMod .. " + " .. "M", hl.dsp.exit())
 hl.bind(mainMod .. " + " .. "E", hl.dsp.exec_cmd("dolphin"))
 hl.bind(mainMod .. " + " .. "F", hl.dsp.window.float())
@@ -270,39 +270,52 @@ hl.bind(
 	hl.dsp.exec_cmd(os.getenv("HOME") .. "/bin/select_monitor_screenshot.sh")
 )
 
--- -- TODO: manual review (unknown dispatcher: gloview:toggle)
--- hl.bind("SUPER + TAB", hl.dsp.gloview:toggle())
---
--- -- TODO: manual review (unknown dispatcher: gloview:desktop)
--- hl.bind("SUPER + SHIFT + TAB", hl.dsp.gloview:desktop())
---
--- -- TODO: manual review (unknown dispatcher: gloview:allworkspaces)
--- hl.bind("SUPER + CTRL + TAB", hl.dsp.gloview:allworkspaces())
---
--- -- TODO: manual review (unknown dispatcher: gloview:next)
--- hl.bind("SUPER + bracketright", hl.dsp.gloview:next())
---
--- -- TODO: manual review (unknown dispatcher: gloview:prev)
--- hl.bind("SUPER + bracketleft", hl.dsp.gloview:prev())
---
--- -- TODO: manual review (unknown dispatcher: gloview:setworkspace)
--- hl.bind("SUPER + 2", hl.dsp.gloview:setworkspace(2))
---
--- hl.plugin("hyprbars", function()
---     bar_height = 15,
---     bar_padding = 20,
---     bar_title_enabled = false,
---     bar_color = "rgb(11111B)",
---     hyprbars-button = { "rgb(FF5555)", 12, "", "hyprctl dispatch killactive" },
---     hyprbars-button = { "rgb(50FA7B)", 12, "", "hyprctl dispatch fullscreen 1" },
---     hyprbars-button = { "rgb(F1FA8C)", 12, "", "hyprctl dispatch togglefloating" },
---     on_double_click = "hyprctl dispatch fullscreen 1",
--- end)
--- hl.plugin("hyprscrolling", function()
---     column_width = 0.485,
---     focus_fit_method = 1,
---     fullscreen_on_one_column = true,
--- end)
+if hl.plugin.gloview ~= nil then
+	hl.bind("SUPER + TAB", hl.plugin.gloview.toggle)
+	hl.bind("SUPER + SHIFT + TAB", hl.plugin.gloview.desktop)
+	hl.bind("SUPER + CTRL + TAB", hl.plugin.gloview.allworkspaces)
+	hl.bind("SUPER + bracketright", hl.plugin.gloview.next)
+	hl.bind("SUPER + bracketleft", hl.plugin.gloview.prev)
+	-- hl.bind("SUPER + 2", function()
+	-- 	hl.plugin.gloview.setworkspace(2)
+	-- end)
+end
+
+if hl.plugin.hyprbars ~= nil then
+	hl.config({
+		plugin = {
+			hyprbars = {
+				bar_height = 15,
+				bar_padding = 20,
+				bar_title_enabled = false,
+				bar_color = "rgb(11111B)",
+				on_double_click = "hyprctl dispatch fullscreen 1",
+			},
+		},
+	})
+	hl.plugin.hyprbars.add_button({
+		bg_color = "rgb(ff5555)",
+		fg_color = "rgb(ffffff)",
+		size = 12,
+		icon = "",
+		action = "hyprctl dispatch 'hl.dsp.window.close()'",
+	})
+	hl.plugin.hyprbars.add_button({
+		bg_color = "rgb(50fa7b)",
+		fg_color = "rgb(ffffff)",
+		size = 12,
+		icon = "",
+		action = [[hyprctl dispatch 'hl.dsp.window.fullscreen({ mode = "maximized", action = "toggle" })']],
+	})
+	hl.plugin.hyprbars.add_button({
+		bg_color = "rgb(f1fa8c)",
+		fg_color = "rgb(ffffff)",
+		size = 12,
+		icon = "",
+		action = [[hyprctl dispatch 'hl.dsp.window.float({action = "toggle"})']],
+	})
+end
+
 -- hl.plugin("hyprwinwrap", function()
 --     class = "hyprwinwrap-wallpaper",
 -- end)
@@ -334,10 +347,10 @@ hl.on("hyprland.start", function()
 			.. os.getenv("HOME")
 			.. "/.config/hypr/hyprland-autoname-workspaces-config.toml & waybar &"
 	)
-	hl.exec_cmd(
-		'mpvpaper -vs -f -o "no-audio loop --gpu-api=vulkan --hwdec=auto-safe --panscan=1 --cache=no --demuxer-max-bytes=100M --demuxer-max-back-bytes=50M" ALL '
-			.. os.getenv("HOME")
-			.. "/.config/assets/wallpapers/forest01.mp4"
-	)
+	-- hl.exec_cmd(
+	-- 	'mpvpaper -vs -f -o "no-audio loop --gpu-api=vulkan --hwdec=auto-safe --panscan=1 --cache=no --demuxer-max-bytes=100M --demuxer-max-back-bytes=50M" ALL '
+	-- 		.. os.getenv("HOME")
+	-- 		.. "/.config/assets/wallpapers/forest01.mp4"
+	-- )
 	hl.exec_cmd("hyprctl setcursor Bibata-Modern-Classic 24 &")
 end)
